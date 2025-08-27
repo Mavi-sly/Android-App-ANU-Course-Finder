@@ -80,7 +80,9 @@
 
 3. **Reusing search history**  
    - The app displays recent queries under the search box.  
-   - The student clicks on a past query → it auto-fills the search bar.  
+   - The student clicks on a past query → it auto-fills the search bar.
+   
+![use cases](items/media/use_cases_diagram.png)  
 
 ---
 
@@ -95,9 +97,8 @@
 ---
 
 ## 🐞 Known Issues  
-- Missing toast message when no search results are found.  
 - Misalignment issue when course names are too long in the list.  
-- Dataset does not include some course prefixes (e.g., `EXTN`).  
+- The dataset does not include some course prefixes (e.g., `EXTN`).  
 - History updates only after re-login.  
 
 ---
