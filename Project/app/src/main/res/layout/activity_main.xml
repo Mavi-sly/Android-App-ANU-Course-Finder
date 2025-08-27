@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvSearchResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="23dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/MainSearch"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/text_input_background"
+        android:hint="Enter Course"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColorHint="#808080"
+        app:layout_constraintBottom_toTopOf="@+id/CourseList"
+        app:layout_constraintEnd_toStartOf="@+id/MainSearchBtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSearchResult"
+        app:layout_constraintVertical_bias="0.06999999" />
+
+    <ImageButton
+        android:id="@+id/MainSearchBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="23dp"
+        android:background="@drawable/rounded_button"
+        android:contentDescription="@string/description_search_button"
+        android:src="@drawable/searchic2"
+        app:layout_constraintBottom_toBottomOf="@+id/MainSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MainSearch" />
+
+    <!-- Recently Searched -->
+    <TextView
+        android:id="@+id/recentlySearchedLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=" RECENTLY SEARCHED:"
+        android:textColor="@color/grey2"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/MainSearch"
+        app:layout_constraintTop_toBottomOf="@+id/MainSearchBtn" />
+
+    <!-- History record button 1 -->
+    <Button
+        android:id="@+id/mainHistoryBtn1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="History 1"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/grey1"
+        app:layout_constraintEnd_toStartOf="@+id/mainHistoryBtn2"
+        app:layout_constraintStart_toStartOf="@+id/MainSearch"
+        app:layout_constraintTop_toBottomOf="@+id/recentlySearchedLabel2"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <!-- History record button 2 -->
+    <Button
+        android:id="@+id/mainHistoryBtn2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="History 2"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/grey1"
+        app:layout_constraintEnd_toStartOf="@+id/mainHistoryBtn3"
+        app:layout_constraintStart_toEndOf="@+id/mainHistoryBtn1"
+        app:layout_constraintTop_toTopOf="@+id/mainHistoryBtn1"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <!-- History record button 3 -->
+    <Button
+        android:id="@+id/mainHistoryBtn3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="History 3"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/grey1"
+        app:layout_constraintEnd_toEndOf="@+id/MainSearch"
+        app:layout_constraintStart_toEndOf="@+id/mainHistoryBtn2"
+        app:layout_constraintTop_toTopOf="@+id/mainHistoryBtn1"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnToggleFilter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/flat_button"
+        android:padding="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="REFINE 363 RESULTS:"
+        app:backgroundTint="@color/mainColor"
+        app:layout_constraintEnd_toEndOf="@+id/MainSearchBtn"
+        app:layout_constraintStart_toStartOf="@+id/MainSearch"
+        app:layout_constraintTop_toBottomOf="@id/mainHistoryBtn1" />
+
+    <!-- Filter group -->
+    <LinearLayout
+        android:id="@+id/FilterBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#F4EDDF"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/MainSearchBtn"
+        app:layout_constraintStart_toStartOf="@+id/MainSearch"
+        app:layout_constraintTop_toBottomOf="@+id/btnToggleFilter">
+
+        <!-- Row 1: Career -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CAREER:"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/cbUndergraduate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/mainColor"
+                android:text="Undergraduate" />
+
+            <CheckBox
+                android:id="@+id/cbPostgraduate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/mainColor"
+                android:text="Postgraduate" />
+        </LinearLayout>
+
+        <!-- Row 2: Sessions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:text="SESSIONS:"
+                android:textStyle="bold" />
+
+            <!-- Row 1 with 3 CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbSummer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/mainColor"
+                    android:text="Summer" />
+
+                <CheckBox
+                    android:id="@+id/cbAutumn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/mainColor"
+                    android:text="Autumn" />
+
+                <CheckBox
+                    android:id="@+id/cbWinter"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/mainColor"
+                    android:text="Winter" />
+            </LinearLayout>
+
+            <!-- Row 2 with 3 CheckBoxes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbFirstSem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/mainColor"
+                    android:text="First Semester" />
+
+                <CheckBox
+                    android:id="@+id/cbSecondSem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/mainColor"
+                    android:text="Second Semester" />
+
+                <CheckBox
+                    android:id="@+id/cbSpring"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:buttonTint="@color/mainColor"
+                    android:text="Spring" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnApply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/mainColor"
+                android:text="Apply" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TitleBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnToggleFilter"
+        app:layout_constraintStart_toStartOf="@+id/btnToggleFilter"
+        app:layout_constraintTop_toBottomOf="@+id/FilterBox">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="CODE"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center|left"
+            android:text="TITLE"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/CourseList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/TitleBar"
+        app:layout_constraintStart_toStartOf="@+id/TitleBar"
+        app:layout_constraintTop_toBottomOf="@+id/TitleBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

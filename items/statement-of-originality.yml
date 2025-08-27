@@ -1,0 +1,51 @@
+## Pledge of Academic Integrity
+<DO NOT MODIFY THE STRUCTURE OF THIS FILE>
+    
+I am committed to being a person of integrity.
+    
+I pledge, as a member of the Australian National University community,
+to abide by and uphold the standards of academic integrity outlined in
+the ANU statement on [honesty and plagiarism](http://www.anu.edu.au/students/program-administration/assessments-exams/academic-honesty-plagiarism),
+and I am aware of the relevant
+[legislation](https://www.legislation.gov.au/Details/F2021L00997),
+  and understand the consequences of me breaching those rules. I confirm that my answers to the questions below will be truthful, up to date and complete.
+# for information & examples on how to fill this out correctly, see
+# https://cs.anu.edu.au/courses/comp1720/resources/faq/#statement-of-originality
+# this document has been modified for the purpose of the COMP2100/6442 group assignment.
+
+## Research
+  We may use data related to this assignment, including this statement, for research purposes to improve computing education and student experience. Your participation is entirely voluntary and any personal information will be anonymized and kept confidential. Your identity will not be disclosed in any research reports or publications. To opt out of this research, uncheck below.
+- [X] I consent to use my data for research purposes.
+
+
+declaration: >-
+  I declare that everything I have submitted in this assignment is entirely our
+  own work, with the following exceptions:
+
+### Questions (answer before final submission):
+1. You (as a group) completed this work (tick the most appropriate option):
+  - [] by yourself (as a group) without the help of others;
+      [ ] with Gen AI tools (e.g., ChatGPT, Co-Pilot).
+      [x] using online resources (e.g., Stackoverflow, blogs)
+
+2. If not completed by yourself only, how did the use of Gen AI tools (and which ones), contribute to completing this assignment?
+  - Tool(s): The AVL part was referenced from the code in the lab 4(https://gitlab.cecs.anu.edu.au/u7726399/comp2100-lab-04).
+  
+3. How did they contribute to the completion of this assignment?
+  - It helps with the avl funtion achievement.
+
+4. How long did it take to complete this assignment (approximately, in hours)?
+  - 30 hours
+
+
+
+# for each member, sign by inputting your name and uid here (remove any empty "name+uid" entries)
+members:
+  - name: Shiying Cai
+    uid: u7580335
+  - name: Xuan Liu
+    uid: u6393399
+  - name: Xinlong Wu
+    uid: u7619947
+  - name: Meitong Liu
+    uid: u7726399

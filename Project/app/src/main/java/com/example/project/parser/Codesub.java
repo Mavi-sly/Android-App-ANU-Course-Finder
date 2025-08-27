@@ -1,0 +1,22 @@
+package com.example.project.parser;
+/**
+ * @author u7726399 Meitong Liu
+ */
+public enum Codesub {
+
+    INTR,MGMT,CBEA,BIOL,SCNC,HLTH,HIST,PHYS,BUSN,INFS,ARTV,ASIA,ACST,STAT,ENGL,LAWS,LING,MATH,
+    COMP,PHIL,GREK,PSYC,ARAB,ECON,EMET,ENGN,FINM,ARCH,FREN,PERS,INDN,ITAL,JPNS,MUSI,KORE,LATN,CHIN,
+    CHEM,CLAS,SOCY,SPAN,ARTS,BPHB,SOCR,BIAN,MKTG,ARTH,ENVS,IDEC,CRIM,STST,POPH,EMSC,CHMD,ANTH,CECS,
+    CYBN,CRWF,POLS,MMIB,EMDV,BUSI,ASTR,PASI,BAPA,SCRN,ECHI,INDG,ANIP,NSPO,MEAS,DESN,HUMN,VCUG,VCPG,
+    MEDN,REGN,POGO,BURM,NEUR,MUSC,SCOM,EURO,DIPL,PORT,DEMO,TURK,GEND,HONS,GERM,HIND,RUSS,MEDI,MNGL,
+    PPEI,CHST,POPM,LANG,SKRT,WARS,TETM,THAI,THES,TIBN,TOKP,VIET, EXTN ,INFT;
+
+    public static Codesub getCodeSub(String str) {
+        try {
+            return Codesub.valueOf(str.toUpperCase());
+        } catch (IllegalArgumentException e) {
+            return null;
+        }
+    }
+}
+

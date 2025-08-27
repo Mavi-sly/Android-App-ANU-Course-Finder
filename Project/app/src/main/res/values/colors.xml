@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="mainColor">#B58530</color>
+    <color name="courseCodeColor">#23549A</color>
+    <color name="textInputColor">#C4C4C4</color>
+    <color name="backgroudColor">#F4EDDF</color>
+    <color name="grey1">#EFEFEF</color>
+    <color name="grey2">#5B5B5B</color>
+
+</resources>
+

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".HomeActivity">
+
+    <Button
+        android:id="@+id/HomeButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="23dp"
+        android:background="@drawable/rounded_button"
+        android:text="Search"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:backgroundTint="@color/mainColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HomeSearch" />
+
+    <EditText
+        android:id="@+id/HomeSearch"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="23dp"
+        android:background="@drawable/text_input_background"
+        android:hint="Enter Course"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColorHint="#808080"
+        android:drawableStart="@drawable/searchic"
+        android:drawablePadding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SearchLogo" />
+
+    <TextView
+        android:id="@+id/recentlySearchedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="RECENTLY SEARCHED"
+        android:textColor="@color/grey2"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/HomeButton"
+        app:layout_constraintStart_toStartOf="@+id/HomeSearch"
+        app:layout_constraintTop_toBottomOf="@+id/HomeButton" />
+
+    <!-- History button 1 -->
+    <Button
+        android:id="@+id/historyButton1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/grey1"
+        app:layout_constraintEnd_toStartOf="@+id/historyButton2"
+        app:layout_constraintStart_toStartOf="@+id/HomeButton"
+        app:layout_constraintTop_toBottomOf="@+id/recentlySearchedLabel"
+        app:layout_constraintWidth_percent="0.3" />
+
+
+    <!-- History button 2 -->
+    <Button
+        android:id="@+id/historyButton2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:backgroundTint="@color/grey1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/historyButton3"
+        app:layout_constraintStart_toEndOf="@+id/historyButton1"
+        app:layout_constraintTop_toTopOf="@+id/historyButton1"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <!-- History button 3 -->
+    <Button
+        android:id="@+id/historyButton3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:backgroundTint="@color/grey1"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/HomeSearch"
+        app:layout_constraintStart_toEndOf="@+id/historyButton2"
+        app:layout_constraintTop_toTopOf="@+id/historyButton1"
+        app:layout_constraintWidth_percent="0.3" />
+
+
+    <ImageView
+        android:id="@+id/SearchLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/searchlogo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

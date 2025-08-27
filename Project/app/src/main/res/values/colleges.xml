@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="colleges">
+        <item>All Colleges</item>
+        <item>ANU College of Arts and Social Sciences</item>
+        <item>ANU College of Asia and the Pacific</item>
+        <item>ANU College of Business and Economics</item>
+        <item>ANU College of Engineering Computing &amp; Cybernetics</item>
+        <item>ANU College of Law</item>
+        <item>ANU Joint Colleges of Science</item>
+    </string-array>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CourseFinder</string>
+    <string name="description_search_button">This is search button</string>
+    <string name="back_button_description">Back to Main Page</string>
+</resources>
