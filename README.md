@@ -32,7 +32,6 @@
   - **Session**: Summer, First Semester, Second Semester.  
 - Real-time updates on results when filters are applied.  
 
-![use cases diagram](items/media/use cases diagram.png)  
 
 ---
 
